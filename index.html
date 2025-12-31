@@ -4,68 +4,345 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- Bootstrap & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <button class="theme-toggle-btn" id="themeToggle">
+            <i class="bi bi-moon"></i>
+        </button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#"><span>Contact </span>Us</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="bi bi-list" style="color: var(--text-primary); font-size: 1.5rem;"></i>
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-house-door mr-2"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#map"><i class="bi bi-info-circle mr-2"></i>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="bi bi-briefcase mr-2"></i>Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#msg"><i class="bi bi-envelope mr-2"></i>Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map-container" id="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5431.636332607684!2d73.89658302068707!3d18.420720273734283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c058396c3aa3%3A0xda785dfcd808849f!2sTrinity%20Academy%20of%20Engineering!5e1!3m2!1sen!2sin!4v1767195459866!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Merged Contact Info Section -->
+        <div class="contact-info-section" id="contact">
+            <div class="contact-info-header">
+                <h2>Contact Info</h2>
+                <p>Reach out to us through any of the following channels</p>
+            </div>
+
+            <div class="contact-info-grid">
+                <div class="contact-info-item">
+                    <div class="contact-icon-wrapper">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <h3>Our Location</h3>
+                    <p>A108 Adam Street, New York, NY 535022</p>
+                    <p class="mt-2 text-small">Visit our office during business hours</p>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-icon-wrapper">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>info@example.com</p>
+                    <p>support@example.com</p>
+                    <p class="mt-2 text-small">We'll reply within 24 hours</p>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-icon-wrapper">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>+1 5589 55488 555</p>
+                    <p>+1 6678 25444 987</p>
+                    <p class="mt-2 text-small">Mon-Fri: 9AM-6PM EST</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container" id="msg">
+            <div class="form-header">
+                <h2>Send us a Message</h2>
+                <p>Fill out the form below and we'll get back to you shortly</p>
+            </div>
+
+            <form id="contactForm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control" id="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="bi bi-send mr-2"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo"><span>Contact</span> Us</a>
+                    <p>We're dedicated to providing the best service and support to our clients. Reach out anytime for
+                        assistance.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick </h3>
+                    <ul>
+                        <li><a href="#"><i class="bi bi-chevron-right mr-2"></i>Home</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right mr-2"></i>About Us</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right mr-2"></i>Services</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right mr-2"></i>Portfolio</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right mr-2"></i>Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="bi bi-geo-alt"></i> A1403, Vrindavan, Pune, MH, 411048</p>
+                    <p><i class="bi bi-envelope"></i> info@example.com</p>
+                    <p><i class="bi bi-phone"></i> +91 1234567890</p>
+                    <p><i class="bi bi-clock"></i> Mon-Fri: 9AM-6PM EST</p>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h3>News</h3>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit"><i class="bi bi-send"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Contact Us. | All rights reserved.</p>
+                <p>Designed with <i class="bi bi-heart-fill text-danger"></i> By Rohit.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Theme Toggle Functionality
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = themeToggleBtn.querySelector('i');
+
+        // Check for saved theme or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeIcon.classList.remove('bi-moon');
+            themeIcon.classList.add('bi-sun');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+
+            if (document.body.classList.contains('dark-theme')) {
+                themeIcon.classList.remove('bi-moon');
+                themeIcon.classList.add('bi-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.remove('bi-sun');
+                themeIcon.classList.add('bi-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Form Submission with Validation
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                showAlert('Please fill in all fields', 'error');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showAlert('Please enter a valid email address', 'error');
+                return;
+            }
+
+            // Show success message
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+
+            submitBtn.innerHTML = '<i class="bi bi-check-circle"></i> Message Sent Successfully!';
+            submitBtn.style.background = 'var(--gradient-secondary)';
+
+            // Reset form
+            document.getElementById('contactForm').reset();
+
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = 'var(--gradient-primary)';
+            }, 3000);
+
+            // Show success alert
+            showAlert('Your message has been sent successfully! We\'ll get back to you soon.', 'success');
+        });
+
+        // Alert function
+        function showAlert(message, type) {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type === 'error' ? 'danger' : 'success'} alert-dismissible fade show`;
+            alertDiv.style.position = 'fixed';
+            alertDiv.style.top = '80px';
+            alertDiv.style.right = '20px';
+            alertDiv.style.zIndex = '1000';
+            alertDiv.style.minWidth = '300px';
+            alertDiv.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+
+            alertDiv.innerHTML = `
+                ${message}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            `;
+
+            document.body.appendChild(alertDiv);
+
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (alertDiv.parentElement) {
+                    alertDiv.remove();
+                }
+            }, 5000);
+        }
+
+        // Newsletter form submission
+        document.querySelector('.newsletter-form button').addEventListener('click', function (e) {
+            e.preventDefault();
+            const emailInput = document.querySelector('.newsletter-form input');
+
+            if (!emailInput.value) {
+                showAlert('Please enter your email address', 'error');
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value)) {
+                showAlert('Please enter a valid email address', 'error');
+                return;
+            }
+
+            showAlert('Thank you for subscribing to our newsletter!', 'success');
+            emailInput.value = '';
+        });
+
+        // Add animation to elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.contact-info-section, .contact-form-container, .map-container, .contact-info-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <title>Map Contact Us Page</title>
-
-    <style>
-        .a{
-            width: 1150px;
-            height: 300px;
-        }
-
-        .c{
-            margin-top: 10px;
-            box-shadow: 0px 0px 5px black;
-        }
-
-    </style>
-
-</head>
-<body>
-    <div class="container">
-        <div>
-            <h1 class="text-center">Contact Us</h1>
-            <p class="text-center">Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita <br> at voluptas atque vitae autem</p>
-        </div>
-       
-        <iframe class="a" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96806.67946770083!2d-74.0334878353264!3d40.69140033740452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250d225bfafdd%3A0x249f013a2cd25d9!2sJersey%20City%2C%20NJ%2C%20USA!5e0!3m2!1sen!2sin!4v1697800651768!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        <div class="row">
-            <div class="col-3">
-                <h2 class="mt-4"> <i class="bi bi-geo-alt">  Location:</i></h2>
-                        <p class="ml-4">A108 Adam Street, New York, NY 535022</p>
-                    
-                <h2> <span class="bi bi-envelope">  Email:</span></h2>
-                        <p class="ml-4">info@example.com</p>
-            
-                <h2> <span class="bi bi-phone">  Call: </span></h2>
-                        <p class="ml-4">+1 5589 55488 555</p>
-            </div>
-
-            <div  class="col-9">
-                    <div class="d-flex">
-                        <input type="text" placeholder="Your Name" class=" offset-md-4 col-md-4 mt-4 c"/>
-
-                        <input type="text" placeholder="Your Email" class=" ml-1 float-right offset-md-5
-                        col-md-4 mt-4 c"/>
-                    </div>
-
-                        <input type="text" placeholder="Subject" class="offset-md-4 col-md-8 c";/>
-                    
-                        <textarea placeholder="Message" rows=5 class="offset-md-4 col-md-8 mt-2 c"></textarea>
-
-                    <div class="button">
-                        <input type="submit" value="Send Message" class="offset-md-7 mt-3 btn btn-outline-danger c">
-                    </div>
-            </div>
-        </div>
-    </div>
 </body>
+
 </html>
